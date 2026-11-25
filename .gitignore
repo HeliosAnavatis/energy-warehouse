@@ -1,0 +1,10 @@
+data/
+secrets/
+__pycache__/
+*.py[cod]
+config.toml
+.pytest_cache/
+.venv/
+venv/
+logs/
+*.log

@@ -1,0 +1,44 @@
+[database]
+engine="postgres"
+
+[sqlite]
+type="sqlite"
+path="data/energy.db"
+
+[postgres]
+type = "postgres"
+host = "postgres-server/local"
+port = 5432
+database = "home"
+schema = "utility"
+
+[octopus]
+url="https://api.octopus.energy/v1"
+timeout=30
+
+[solarassistant]
+url="http://solarassistant.local"
+timeout=30
+pv-generation="total/pv_power"
+house-load="total/load_power"
+battery-flow="total/battery_power"
+grid-flow="total/grid_power"
+battery-soc="total/battery_state_of_charge"
+
+[homeassistant]
+url="http://homeassistant.local:8123"
+timeout=30
+
+[weather]
+provider = "openmeteo"
+latitude=57.5962226
+longitude=-13.6875217
+
+[tank]
+volume = 150
+tank_top = "sensor.tank_top"
+tank_bottom = "sensor.tank_bottom"
+
+[collector]
+timezone="Europe/London"
+name="energycollector"
